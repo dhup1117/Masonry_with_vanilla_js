@@ -5,46 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry With Venilla Js</title>
+    <!-- style -->
+    <style>
+        h2{
+            font-size: 30px;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/default.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 
 <body>
+    <!-- masonry items start -->
     <div class="container">
-        <div  id="macy-container" class="row ">
-            <div class="col-md-3">
-                <img src="assets/img/product-34.png" alt="">
-            </div>
-            <div class="col-md-3">
-                <img src="assets/img/product-36.png" alt="">
-            </div>
-            <div class="col-md-3">
-                <img src="assets/img/instagram-2.jpg" alt="">
-            </div>            
-            <div class="col-md-3">
-                <img src="assets/img/product-55.png" alt="">
-            </div>
-            <div class="col-md-3">
-                <img src="assets/img/product-68.png" alt="">
-            </div>
-            <div class="col-md-3">
-                <img src="assets/img/product-55.png" alt="">
-            </div>
-            <div class="col-md-3">
-                <img src="assets/img/instagram-2.jpg" alt="">
-            </div>
-            <div class="col-md-3">
-                <img src="assets/img/product-34.png" alt="">
-            </div> 
+        <h2>Masonary</h2>
+        <div id="macy-container">
+            <img src="assets/img/product-2.jpg" alt="">
+            <img src="assets/img/product-3.jpg" alt="">
+            <img src="assets/img/product-35.png" alt="">
+            <img src="assets/img/product-4.jpg" alt="">
+            <img src="assets/img/product-47.png" alt="">
+            <img src="assets/img/product-50.png" alt="">
+            <img src="assets/img/product-3.jpg" alt="">
+            <img src="assets/img/product-47.png" alt="">
 
         </div>
     </div>
-
+    <!-- masonry items ends -->
     <script src="assets/js/macy.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!--macy js include-->
+    <!-- masonary venilla js code -->
+    <script>
+        var masonry = new Macy({
+            container: '#macy-container', //items selection id
+            trueOrder: false, //masonary order
+            waitForImages: false, //masonary addjustment
+            useOwnImageLoader: false,
+            debug: true,
+            mobileFirst: true,
+            columns: 1,
+            margin: {
+                y: 30,//item to item height
+                x: 30,//item to item width
+            },
+            //masonary option
+            breakAt: {
+                1200: 4,
+                940: 4,
+                520: 3,
+                400: 2
+            },
+        });
+    </script>
 </body>
 
 </html>
